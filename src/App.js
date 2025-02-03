@@ -11,6 +11,9 @@ import Basic1 from "./components/Basic1";
 import Basic2 from "./components/Basic2";
 import CRUD from "./components/crud/CRUD";
 import TaskManager from "./components/taskManager/TaskManager";
+import TicTacToe from "./components/ticTacToe/TicTacToe";
+import FunctionalComponentsCRUD from "./components/FunctionalComponentsCRUD";
+import ClassComponentsCRUD from "./components/ClassComponentsCRUD";
 import bootstrap from 'bootstrap';
 
 // Home Page Component
@@ -75,6 +78,15 @@ function App() {
                         <li className="nav-item">
                             <Link className="nav-link" to="/taskManager">task Manager</Link>
                         </li>
+                        <li className="nav-item">
+                            <Link className="nav-link" to="/ticTacToe">Tic Tac Toe</Link>
+                        </li>
+                        <li className="nav-item">
+                            <Link className="nav-link" to="/functionalComponentsCRUD"> functionalComponentsCRUD </Link>
+                        </li>
+                        <li className="nav-item">
+                            <Link className="nav-link" to="/classComponentsCRUD"> classComponentsCRUD </Link>
+                        </li>
                     </ul>
                 </div>
             </nav>
@@ -90,6 +102,9 @@ function App() {
                 <Route path="/basic2" element={<Basic2 />} />
                 <Route path="/CRUD" element={<CRUD />} />
                 <Route path="/taskManager" element={<TaskManager />} />
+                <Route path="/ticTacToe" element={<TicTacToe />} />
+                <Route path="/functionalComponentsCRUD" element={<FunctionalComponentsCRUD />} />
+                <Route path="/classComponentsCRUD" element={<ClassComponentsCRUD />} />
             </Routes>
         </Router>
     );
