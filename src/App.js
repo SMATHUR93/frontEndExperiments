@@ -14,6 +14,8 @@ import TaskManager from "./components/taskManager/TaskManager";
 import TicTacToe from "./components/ticTacToe/TicTacToe";
 import FunctionalComponentsCRUD from "./components/FunctionalComponentsCRUD";
 import ClassComponentsCRUD from "./components/ClassComponentsCRUD";
+import AppWithRedux from "./components/AppWithRedux";
+import AppWithContext from "./components/AppWithContext";
 import bootstrap from 'bootstrap';
 
 // Home Page Component
@@ -54,7 +56,7 @@ const Company = () => <div className="container-fluid mt-3"><h2>Company Page</h2
 function App() {
     return (
         <Router className="justify-content-center">
-            <nav className="navbar navbar-expand-sm bg-light navbar-light justify-content-center">
+            <nav className="navbar navbar-expand-lg bg-light navbar-light justify-content-center">
                 <div className="container-fluid justify-content-center">
                     <ul  className="navbar-nav">
                         <li className="nav-item">
@@ -66,12 +68,12 @@ function App() {
                         <li className="nav-item">
                             <Link className="nav-link" to="/contact">Contact</Link>
                         </li>
-                        <li className="nav-item">
+                        {/* <li className="nav-item">
                             <Link className="nav-link" to="/basic1">Basic1</Link>
                         </li>
                         <li className="nav-item">
                             <Link className="nav-link" to="/basic2">Basic2</Link>
-                        </li>
+                        </li> */}
                         <li className="nav-item">
                             <Link className="nav-link" to="/CRUD">CRUD</Link>
                         </li>
@@ -86,6 +88,12 @@ function App() {
                         </li>
                         <li className="nav-item">
                             <Link className="nav-link" to="/classComponentsCRUD"> classComponentsCRUD </Link>
+                        </li>
+                        <li className="nav-item">
+                            <Link className="nav-link" to="/AppWithRedux"> AppWithRedux </Link>
+                        </li>
+                        <li className="nav-item">
+                            <Link className="nav-link" to="/AppWithContext"> AppWithContext </Link>
                         </li>
                     </ul>
                 </div>
@@ -105,6 +113,8 @@ function App() {
                 <Route path="/ticTacToe" element={<TicTacToe />} />
                 <Route path="/functionalComponentsCRUD" element={<FunctionalComponentsCRUD />} />
                 <Route path="/classComponentsCRUD" element={<ClassComponentsCRUD />} />
+                <Route path="/AppWithRedux" element={<AppWithRedux />} />
+                <Route path="/AppWithContext" element={<AppWithContext />} />
             </Routes>
         </Router>
     );
